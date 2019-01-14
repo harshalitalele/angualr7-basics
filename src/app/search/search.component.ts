@@ -13,10 +13,13 @@ export class SearchComponent {
   }
 
   onSearch() {
+    alert('Search triggered for ' + this.searchKeyword);
+  }
+
+  showSuggestions() {
     this.needSuggestions = true;
     setTimeout(() => {
       this.needSuggestions = false;
     }, 2000);
-    alert('Search triggered for ' + this.searchKeyword);
   }
 }
