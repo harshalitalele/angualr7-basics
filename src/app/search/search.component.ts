@@ -20,6 +20,6 @@ export class SearchComponent {
     this.needSuggestions = true;
     setTimeout(() => {
       this.needSuggestions = false;
-    }, 2000);
+    }, 10000);
   }
 }

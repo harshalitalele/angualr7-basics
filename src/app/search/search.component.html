@@ -2,11 +2,9 @@
   <input type="text" [(ngModel)]="searchKeyword" (ngModelChange)="showSuggestions()"/>
   <button (click)="onSearch()">Search</button>
   needSuggestions: {{needSuggestions}}
-  <div class="search-suggestions" *ngIf="needSuggestions">
-    <ul>
-      <li>Option 1</li>
-      <li>Option 2</li>
-      <li>Option 3</li>
-    </ul>
-  </div>
+  <ul class="search-suggestions" *ngIf="needSuggestions">
+    <li>Option 1 option option option option option option option option option option option option option</li>
+    <li>Option 2</li>
+    <li>Option 3</li>
+  </ul>
 </div>
