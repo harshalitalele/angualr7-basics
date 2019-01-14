@@ -1,4 +1,12 @@
 <div class="search-wrapper">
   <input type="text" [(ngModel)]="searchKeyword"/>
   <button (click)="onSearch()">Search</button>
+  needSuggestions: {{needSuggestions}}
+  <div *ngIf="needSuggestions">
+    <ul>
+      <li>Option 1</li>
+      <li>Option 2</li>
+      <li>Option 3</li>
+    </ul>
+  </div>
 </div>

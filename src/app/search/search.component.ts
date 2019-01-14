@@ -7,10 +7,16 @@ import { Component} from '@angular/core';
 })
 export class SearchComponent {
   searchKeyword = '';
+  needSuggestions = false;
   constructor() {
+    this.needSuggestions = false;
   }
 
   onSearch() {
+    this.needSuggestions = true;
+    setTimeout(() => {
+      this.needSuggestions = false;
+    }, 2000);
     alert('Search triggered for ' + this.searchKeyword);
   }
 }
