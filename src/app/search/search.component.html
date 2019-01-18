@@ -2,9 +2,17 @@
   <input type="text" [(ngModel)]="searchKeyword" (ngModelChange)="showSuggestions()"/>
   <button (click)="onSearch()">Search</button>
   needSuggestions: {{needSuggestions}}
-  <ul class="search-suggestions" *ngIf="needSuggestions">
+  <!--<ul class="search-suggestions" *ngIf="needSuggestions">
     <li>Option 1 option option option option option option option option option option option option option</li>
     <li>Option 2</li>
     <li>Option 3</li>
-  </ul>
+  </ul>-->
+  <div>
+    <button (click)="onPasswordAsked()">Display Details</button>
+    <p *ngIf="showPass">Secret Password: tuna</p>
+    <div *ngFor="let log of logs" [ngClass]='{"blue-bg": getIndex(log)}'>
+      {{getIndex(log)}}
+      {{log}}
+    </div>
+  </div>
 </div>

@@ -8,6 +8,8 @@ import { Component} from '@angular/core';
 export class SearchComponent {
   searchKeyword = '';
   needSuggestions = false;
+  showPass = false;
+  logs = [];
   constructor() {
     this.needSuggestions = false;
   }
@@ -21,5 +23,14 @@ export class SearchComponent {
     setTimeout(() => {
       this.needSuggestions = false;
     }, 10000);
+  }
+
+  onPasswordAsked() {
+    this.showPass = !this.showPass;
+    this.logs.push('display button value is ' + this.showPass + this.logs.length);
+  }
+
+  getIndex(l) {
+    return this.logs.indexOf(l) > 4;
   }
 }
